@@ -8,7 +8,7 @@ batch_size = os.environ.get('batch_size',200000)
 
 firebase_admin.initialize_app()
 
-def update_collection(request):
+def update_collection():
     
     db = firestore.client()    
     coll = db.collection(collection_name)
@@ -36,3 +36,5 @@ def update_collection(request):
         batch.commit()
         if updated==0:
             break
+            
+update_collection()            
