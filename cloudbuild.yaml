@@ -1,0 +1,7 @@
+- name: 'python:3.7'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+       pip3 install -r requirements.txt
+       python3 batch_update_main_query.py 
